@@ -11,8 +11,10 @@ Production-oriented Next.js starter built with App Router, shadcn/ui, React Quer
   - `/sandbox/button`
   - `/sandbox/input`
   - `/sandbox/card`
+  - `/sandbox/react-query`
 - shadcn/ui initialized and ready to extend
 - React Query provider configured globally with Devtools
+- Shared Axios API client in `src/lib/api.ts` with request/response interceptors
 - Husky + lint-staged pre-commit workflow (`eslint --fix`)
 - SEO files:
   - `src/app/sitemap.ts`
@@ -26,6 +28,8 @@ Production-oriented Next.js starter built with App Router, shadcn/ui, React Quer
 - `typescript@5`
 - `tailwindcss@4`
 - `@tanstack/react-query`
+- `axios`
+- `universal-cookie`
 - `shadcn`
 - `husky` + `lint-staged`
 
@@ -44,8 +48,17 @@ src/
       button/page.tsx
       input/page.tsx
       card/page.tsx
+      react-query/page.tsx
     api/
       sandbox-stats/route.ts
+  hooks/
+    use-random-quote.ts
+  lib/
+    api.ts
+    cookies.ts
+    utils.ts
+  types/
+    api.ts
   components/
     providers/query-provider.tsx
     sandbox/live-query-card.tsx
@@ -94,6 +107,7 @@ Use sandbox pages before integrating components into main pages:
 - `/sandbox/button` for button variants/sizes/states
 - `/sandbox/input` for form inputs and common rows
 - `/sandbox/card` for card composition patterns
+- `/sandbox/react-query` for API fetch + cache/refetch flow
 
 ### 3. Add new shadcn components
 
@@ -107,12 +121,15 @@ Example:
 pnpm dlx shadcn@latest add dialog
 ```
 
-### 4. Use React Query for server-state data
+### 4. Use React Query with shared API client
 
 - Global provider is wired in `src/app/layout.tsx` via `QueryProvider`.
-- Example query implementation lives in:
-  - `src/components/sandbox/react-query/page.tsx`
-  - `src/app/api/sandbox-stats/route.ts`
+- Axios client and interceptors live in `src/lib/api.ts`.
+- Token helper lives in `src/lib/cookies.ts` (cookie key: `@next-starter/token`).
+- Example query hook and usage:
+  - `src/hooks/use-random-quote.ts`
+  - `src/components/sandbox/live-query-card.tsx`
+  - `src/app/sandbox/react-query/page.tsx`
 
 ### 5. Respect commit checks
 
@@ -129,6 +146,22 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
 
 If `NEXT_PUBLIC_SITE_URL` is not set, metadata routes fallback to `http://localhost:3000`.
+
+## Environment Variables
+
+Use `.env.example` as your base and create `.env.local` for local development.
+
+```bash
+cp .env.example .env.local
+```
+
+Available vars:
+
+- `NEXT_PUBLIC_SITE_URL` - used by `robots.ts` and `sitemap.ts`
+- `NEXT_PUBLIC_RUN_MODE` - API mode switch (`development` or `production`)
+- `NEXT_PUBLIC_API_URL` - explicit API URL (highest priority)
+- `NEXT_PUBLIC_API_URL_DEV` - fallback API URL in development mode
+- `NEXT_PUBLIC_API_URL_PROD` - fallback API URL in production mode
 
 ## Deployment
 

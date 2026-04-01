@@ -62,23 +62,23 @@ src/
 2. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 3. Start development server:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 4. Open `http://localhost:3000`.
 
 ## Available Scripts
 
-- `npm run dev` - run dev server
-- `npm run build` - production build
-- `npm run start` - run production server
-- `npm run lint` - run ESLint
+- `pnpm dev` - run dev server
+- `pnpm build` - production build
+- `pnpm start` - run production server
+- `pnpm lint` - run ESLint
 
 ## How To Use This Repo
 
@@ -98,13 +98,13 @@ Use sandbox pages before integrating components into main pages:
 ### 3. Add new shadcn components
 
 ```bash
-npx shadcn@latest add <component-name>
+pnpm dlx shadcn@latest add <component-name>
 ```
 
 Example:
 
 ```bash
-npx shadcn@latest add dialog
+pnpm dlx shadcn@latest add dialog
 ```
 
 ### 4. Use React Query for server-state data
@@ -137,8 +137,8 @@ Deploy on Vercel (recommended) or any Node-compatible platform.
 Typical production flow:
 
 1. Set environment variables (at least `NEXT_PUBLIC_SITE_URL`).
-2. Run `npm run build`.
-3. Run `npm run start`.
+2. Run `pnpm build`.
+3. Run `pnpm start`.
 
 ## Notes
 

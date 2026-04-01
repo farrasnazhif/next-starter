@@ -16,7 +16,9 @@ export default function InputSandboxPage() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="space-y-2">
-            <Badge variant="secondary">Input Sandbox</Badge>
+            <Badge className="rounded-full p-3 text-xs tracking-wide uppercase">
+              Input Sandbox
+            </Badge>
             <h1 className="text-3xl font-semibold tracking-tight">
               Input component playground
             </h1>
@@ -32,7 +34,11 @@ export default function InputSandboxPage() {
             >
               All sandboxes
             </Button>
-            <Button variant="outline" nativeButton={false} render={<Link href="/" />}>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/" />}
+            >
               Back to landing
             </Button>
           </div>
@@ -41,7 +47,9 @@ export default function InputSandboxPage() {
         <Card>
           <CardHeader>
             <CardTitle>Input States</CardTitle>
-            <CardDescription>Default, disabled, and prefilled patterns.</CardDescription>
+            <CardDescription>
+              Default, disabled, and prefilled patterns.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             <Input placeholder="Enter project name" />
@@ -53,7 +61,9 @@ export default function InputSandboxPage() {
         <Card>
           <CardHeader>
             <CardTitle>Form Rows</CardTitle>
-            <CardDescription>Simple stacked rows with labels and helper text.</CardDescription>
+            <CardDescription>
+              Simple stacked rows with labels and helper text.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">

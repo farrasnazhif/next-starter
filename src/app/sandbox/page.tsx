@@ -16,7 +16,9 @@ export default function SandboxPage() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="space-y-2">
-            <Badge variant="secondary">Sandbox Directory</Badge>
+            <Badge className="rounded-full p-3 text-xs tracking-wide uppercase">
+              Sandbox Directory
+            </Badge>
             <h1 className="text-3xl font-semibold tracking-tight">
               Component sandbox pages
             </h1>
@@ -24,7 +26,11 @@ export default function SandboxPage() {
               Open a dedicated route for each component playground.
             </p>
           </div>
-          <Button variant="outline" nativeButton={false} render={<Link href="/" />}>
+          <Button
+            variant="outline"
+            nativeButton={false}
+            render={<Link href="/" />}
+          >
             Back to landing
           </Button>
         </div>
@@ -33,10 +39,15 @@ export default function SandboxPage() {
           <Card>
             <CardHeader>
               <CardTitle>Button</CardTitle>
-              <CardDescription>Variants, sizes, icons, and states.</CardDescription>
+              <CardDescription>
+                Variants, sizes, icons, and states.
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button nativeButton={false} render={<Link href="/sandbox/button" />}>
+              <Button
+                nativeButton={false}
+                render={<Link href="/sandbox/button" />}
+              >
                 Open page
               </Button>
             </CardContent>
@@ -47,7 +58,10 @@ export default function SandboxPage() {
               <CardDescription>Input styles and form patterns.</CardDescription>
             </CardHeader>
             <CardContent>
-              <Button nativeButton={false} render={<Link href="/sandbox/input" />}>
+              <Button
+                nativeButton={false}
+                render={<Link href="/sandbox/input" />}
+              >
                 Open page
               </Button>
             </CardContent>
@@ -55,10 +69,15 @@ export default function SandboxPage() {
           <Card>
             <CardHeader>
               <CardTitle>Card</CardTitle>
-              <CardDescription>Layout composition with card primitives.</CardDescription>
+              <CardDescription>
+                Layout composition with card primitives.
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button nativeButton={false} render={<Link href="/sandbox/card" />}>
+              <Button
+                nativeButton={false}
+                render={<Link href="/sandbox/card" />}
+              >
                 Open page
               </Button>
             </CardContent>

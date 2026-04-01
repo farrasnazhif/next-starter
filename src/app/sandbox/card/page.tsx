@@ -17,7 +17,9 @@ export default function CardSandboxPage() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="space-y-2">
-            <Badge variant="secondary">Card Sandbox</Badge>
+            <Badge className="rounded-full p-3 text-xs tracking-wide uppercase">
+              Card Sandbox
+            </Badge>
             <h1 className="text-3xl font-semibold tracking-tight">
               Card component playground
             </h1>
@@ -33,7 +35,11 @@ export default function CardSandboxPage() {
             >
               All sandboxes
             </Button>
-            <Button variant="outline" nativeButton={false} render={<Link href="/" />}>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/" />}
+            >
               Back to landing
             </Button>
           </div>
@@ -43,7 +49,9 @@ export default function CardSandboxPage() {
           <Card>
             <CardHeader>
               <CardTitle>Simple Card</CardTitle>
-              <CardDescription>Basic card with heading and body copy.</CardDescription>
+              <CardDescription>
+                Basic card with heading and body copy.
+              </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
               This structure is useful for displaying short summaries or
@@ -58,7 +66,9 @@ export default function CardSandboxPage() {
           <Card>
             <CardHeader>
               <CardTitle>Card with Action</CardTitle>
-              <CardDescription>Header action area for contextual controls.</CardDescription>
+              <CardDescription>
+                Header action area for contextual controls.
+              </CardDescription>
               <CardAction>
                 <Button size="sm" variant="outline">
                   Manage
@@ -66,7 +76,8 @@ export default function CardSandboxPage() {
               </CardAction>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
-              Add filters, dropdowns, or quick actions via <code>CardAction</code>.
+              Add filters, dropdowns, or quick actions via{" "}
+              <code>CardAction</code>.
             </CardContent>
           </Card>
         </div>

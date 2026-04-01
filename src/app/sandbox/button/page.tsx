@@ -16,7 +16,9 @@ export default function ButtonSandboxPage() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="space-y-2">
-            <Badge variant="secondary">Button Sandbox</Badge>
+            <Badge className="rounded-full p-3 text-xs tracking-wide uppercase">
+              Button Sandbox
+            </Badge>
             <h1 className="text-3xl font-semibold tracking-tight">
               Button component playground
             </h1>
@@ -32,7 +34,11 @@ export default function ButtonSandboxPage() {
             >
               All sandboxes
             </Button>
-            <Button variant="outline" nativeButton={false} render={<Link href="/" />}>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/" />}
+            >
               Back to landing
             </Button>
           </div>
@@ -41,7 +47,9 @@ export default function ButtonSandboxPage() {
         <Card>
           <CardHeader>
             <CardTitle>Variants</CardTitle>
-            <CardDescription>Compare all available visual styles.</CardDescription>
+            <CardDescription>
+              Compare all available visual styles.
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-3">
             <Button>Default</Button>
@@ -56,7 +64,9 @@ export default function ButtonSandboxPage() {
         <Card>
           <CardHeader>
             <CardTitle>Sizes</CardTitle>
-            <CardDescription>Check spacing and hierarchy by size.</CardDescription>
+            <CardDescription>
+              Check spacing and hierarchy by size.
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-wrap items-center gap-3">
             <Button size="xs">Extra Small</Button>
@@ -89,7 +99,9 @@ export default function ButtonSandboxPage() {
         <Card>
           <CardHeader>
             <CardTitle>States</CardTitle>
-            <CardDescription>Preview disabled and busy interactions.</CardDescription>
+            <CardDescription>
+              Preview disabled and busy interactions.
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-wrap items-center gap-3">
             <Button disabled>Disabled</Button>

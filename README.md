@@ -111,7 +111,7 @@ pnpm dlx shadcn@latest add dialog
 
 - Global provider is wired in `src/app/layout.tsx` via `QueryProvider`.
 - Example query implementation lives in:
-  - `src/components/sandbox/live-query-card.tsx`
+  - `src/components/sandbox/react-query/page.tsx`
   - `src/app/api/sandbox-stats/route.ts`
 
 ### 5. Respect commit checks

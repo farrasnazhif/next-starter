@@ -25,10 +25,14 @@ export default function InputSandboxPage() {
             </p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" render={<Link href="/sandbox" />}>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/sandbox" />}
+            >
               All sandboxes
             </Button>
-            <Button variant="outline" render={<Link href="/" />}>
+            <Button variant="outline" nativeButton={false} render={<Link href="/" />}>
               Back to landing
             </Button>
           </div>

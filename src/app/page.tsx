@@ -27,10 +27,20 @@ export default function Home() {
             pre-commit hooks, and React Query configuration out of the box.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button size="lg" className="gap-2" render={<Link href="/sandbox" />}>
+            <Button
+              size="lg"
+              className="gap-2"
+              nativeButton={false}
+              render={<Link href="/sandbox" />}
+            >
               Open Sandbox <ArrowRight className="size-4" />
             </Button>
-            <Button variant="outline" size="lg" render={<a href="#features" />}>
+            <Button
+              variant="outline"
+              size="lg"
+              nativeButton={false}
+              render={<a href="#features" />}
+            >
               Explore Features
             </Button>
           </div>

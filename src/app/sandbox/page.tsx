@@ -24,7 +24,7 @@ export default function SandboxPage() {
               Open a dedicated route for each component playground.
             </p>
           </div>
-          <Button variant="outline" render={<Link href="/" />}>
+          <Button variant="outline" nativeButton={false} render={<Link href="/" />}>
             Back to landing
           </Button>
         </div>
@@ -36,7 +36,9 @@ export default function SandboxPage() {
               <CardDescription>Variants, sizes, icons, and states.</CardDescription>
             </CardHeader>
             <CardContent>
-              <Button render={<Link href="/sandbox/button" />}>Open page</Button>
+              <Button nativeButton={false} render={<Link href="/sandbox/button" />}>
+                Open page
+              </Button>
             </CardContent>
           </Card>
           <Card>
@@ -45,7 +47,9 @@ export default function SandboxPage() {
               <CardDescription>Input styles and form patterns.</CardDescription>
             </CardHeader>
             <CardContent>
-              <Button render={<Link href="/sandbox/input" />}>Open page</Button>
+              <Button nativeButton={false} render={<Link href="/sandbox/input" />}>
+                Open page
+              </Button>
             </CardContent>
           </Card>
           <Card>
@@ -54,7 +58,9 @@ export default function SandboxPage() {
               <CardDescription>Layout composition with card primitives.</CardDescription>
             </CardHeader>
             <CardContent>
-              <Button render={<Link href="/sandbox/card" />}>Open page</Button>
+              <Button nativeButton={false} render={<Link href="/sandbox/card" />}>
+                Open page
+              </Button>
             </CardContent>
           </Card>
         </div>

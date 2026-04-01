@@ -31,7 +31,7 @@ export default function SandboxPage() {
           </Button>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader>
               <CardTitle>Button</CardTitle>
@@ -73,6 +73,22 @@ export default function SandboxPage() {
               <Button
                 nativeButton={false}
                 render={<Link href="/sandbox/card" />}
+              >
+                Open page
+              </Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>React Query</CardTitle>
+              <CardDescription>
+                Live API fetch with caching and refetch.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button
+                nativeButton={false}
+                render={<Link href="/sandbox/react-query" />}
               >
                 Open page
               </Button>
